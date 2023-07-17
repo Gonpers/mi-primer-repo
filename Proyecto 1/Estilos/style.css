@@ -4,8 +4,8 @@ width: 300px;
 
 }
 
-#botontest {
+.deportes {
 
-bottom-color: aqua;
-
+border: 1px black solid;
 }
+
