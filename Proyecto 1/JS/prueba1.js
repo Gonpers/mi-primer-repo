@@ -52,3 +52,23 @@ function showAlert2 (){
 
     alert (`Oh no ${realName}, te transformaste en un ${userName2} gg no team`);
 }
+
+
+var colored = "red";
+
+var colored2 = "blueviolet";
+
+function backgcc(){
+
+    var div = document.getElementById("miDivCambiante");
+    
+    if (div.style.backgroundColor != "red" ) {
+
+        div.style.backgroundColor = "red";
+        
+    } else {
+
+        div.style.backgroundColor = "blueviolet";
+    }
+    
+}
