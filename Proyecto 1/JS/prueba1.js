@@ -21,7 +21,7 @@ color:"blanco"
 
 ]
 
-let userList = [
+/*let userList = [
 {
     nombre: "jenith",
     telefono: "262226226",
@@ -33,22 +33,22 @@ let userList = [
     edad: 28   
 }
 
-]
+] */
 
-console.log(userList);
-console.log(listaAutos);
+//console.log(userList);
+//console.log(listaAutos);
 
 console.log(auto);
 
 let realName;
 
-let userName = 'Rigbebito';
+//let userName = 'Rigbebito';
 
-var userName2 = 'digrat';
+//var userName2 = 'digrat';
 
 const pi = 3.14159265359 ;
 
-console.log(userName)
+//console.log(userName)
 
 //realName = prompt("Quien sos vos??");
 //formularios
@@ -93,5 +93,33 @@ function backgcc(){
 
         div.style.backgroundColor = "blueviolet";
     }
-    
 }
+
+function registerUser() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const birthdate = document.getElementById("birthdate").value;
+
+// Validaciones de los valores ingresados
+ if (!username || !password || !birthdate) {
+    alert("Por favor completa todos los campos.");
+    return;
+  }
+
+// Crear un objeto de usuario con los valores ingresados
+   const user = {
+    username: username,
+    password: password,
+    birthdate: birthdate
+  };
+
+// Agregar el objeto de usuario a una lista de usuarios registrados
+const userList = JSON.parse(localStorage.getItem("users")) || [];
+userList.push(user);
+localStorage.setItem("users", JSON.stringify(userList));
+
+// Mostrar un mensaje de éxito al usuario
+alert("Registro exitoso!");
+console.log (user);
+}
+
