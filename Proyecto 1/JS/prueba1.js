@@ -95,31 +95,38 @@ function backgcc(){
     }
 }
 
+let userList = [];
+
 function registerUser() {
+   // e.preventDefault()
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
     const birthdate = document.getElementById("birthdate").value;
 
+
 // Validaciones de los valores ingresados
- if (!username || !password || !birthdate) {
-    alert("Por favor completa todos los campos.");
-    return;
-  }
+// if (!username || !password || !birthdate) {
+ //   alert("Por favor completa todos los campos.");
+ //   return;
+  //}
 
 // Crear un objeto de usuario con los valores ingresados
    const user = {
     username: username,
-    password: password,
+    password: password, 
     birthdate: birthdate
   };
 
+    // Agregar el usuario al array de usuarios
+    userList.push(user);
+
 // Agregar el objeto de usuario a una lista de usuarios registrados
-const userList = JSON.parse(localStorage.getItem("users")) || [];
-userList.push(user);
-localStorage.setItem("users", JSON.stringify(userList));
+//const userList = JSON.parse(localStorage.getItem("users")) || [];
+//userList.push(user);
+//localStorage.setItem("users", JSON.stringify(userList));
 
 // Mostrar un mensaje de éxito al usuario
-alert("Registro exitoso!");
-console.log (user);
+//alert("Registro exitoso!");
+console.log(userList);
 }
 
