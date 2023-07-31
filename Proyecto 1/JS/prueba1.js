@@ -130,3 +130,36 @@ function registerUser() {
 console.log(userList);
 }
 
+
+function showUsersTable() {
+
+  //Ingresar datos a la tabla de usuarios registrados
+
+    // Obtener el elemento HTML donde se mostrará la tabla
+    var tableRegisteredUsers = document.getElementById("tableRegisteredUsers");
+
+     // Generar la cabecera de la tabla
+     var cabecera = "<tr> <th>Nombre</th> <th>Contraseña</th> <th>Fecha de nacimiento</th> </tr>";
+
+      // Generar una fila por cada objeto del array
+    var filas = "";
+    for (var i = 0; i < userList.length; i++) {
+       
+       
+       
+    
+      filas += "<tr>";
+      filas += "<td>" + userList[i].username + "</td>";
+      filas += "<td>" + userList[i].password + "</td>";
+      filas += "<td>" + userList[i].birthdate + "</td>";
+      filas += "</tr>";
+
+          // Asignar el contenido generado a la tabla
+    tableRegisteredUsers.innerHTML = cabecera + filas;
+
+    console.log(tableRegisteredUsers);
+    
+}
+  
+    }
+
